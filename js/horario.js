@@ -5,7 +5,7 @@ async function cargarHorario() {
   const res = await fetch("/data/horario.json");
   const data = await res.json();
 
-  // 👇 Solo mostramos lunes a sábado en el front
+  // Lunes a sábado en el front
   const diasVisibles = ["lunes","martes","miercoles","jueves","viernes","sabado"];
   const diasAbreviados = ["Lun","Mar","Mie","Jue","Vie","Sab"];
 

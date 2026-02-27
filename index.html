@@ -314,6 +314,23 @@
               maxlength="250"
               required
             ></textarea>
+            <div>
+                <label>
+                    <input 
+                        type="checkbox" 
+                        name="privacidad" 
+                        id="privacidad"
+                        required
+                        style="margin-top:4px; transform:scale(1.2); cursor:pointer;"
+                    >
+                    <span>
+                        He leído y acepto la 
+                        <a href="/privacidad/" target="_blank">
+                            Política de Privacidad
+                        </a>
+                    </span>
+                </label>
+            </div>
             <!--<div class="g-recaptcha" data-sitekey="6LcflWYsAAAAAJqChAugaOyUjUvPp_rWO5UyH2y_"></div>-->
             <button type="submit" class="btn-cta">Enviar</button>
           </form>
@@ -360,10 +377,13 @@
               loading="lazy"
             />
       </div>
-
+      <div class="footer-priv">
+        <a href="/privacidad/">Politica de Privacidad</a>
+      </div>
       <div class="footer-copy">
         <p>&copy; 2026 Boxeo K1 Utebo. Todos los derechos reservados.</p>
       </div>
+
     </footer>
   </body>
 </html>
