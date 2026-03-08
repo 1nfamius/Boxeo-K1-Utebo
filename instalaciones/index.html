@@ -1,28 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="preload" as="image" fetchpriority="high" href="/assets/images/hero-boxeo.webp">
-    <link rel="stylesheet" href="/css/pages/home.css"/>
-    <link rel="stylesheet" href="/css/base.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    
-    <meta name="theme-color" content="#1f1f1f">
-    <meta name="robots" content="index, follow"/>
-    <meta name="author" content="Boxeo K1 Utebo"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/pages/instalaciones.css">
+  <link rel="canonical" href="https://boxeo-k1-utebo.vercel.app/instalaciones">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1f1f1f">
 
+  <meta property="og:title" content="Instalaciones - Boxeo K1 Utebo">
+  <meta property="og:description" content="Conoce las instalaciones del gimnasio Boxeo K1 Utebo en Utebo, Zaragoza.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://boxeo-k1-utebo.vercel.app/instalaciones">
+  <meta property="og:image" content="/assets/images/og-image.webp">
+  <meta name="description" content="Conoce las instalaciones del gimnasio Boxeo K1 Utebo. Ring, zona de entrenamiento, vestuarios y más en Utebo, Zaragoza.">
+  <title>Instalaciones | Boxeo K1 Utebo</title>
 
-
-    <title>Instalaciones | Boxeo K1 Utebo</title>
 </head>
 <body>
-    
+
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <a href="https://boxeo-k1-utebo.vercel.app" class="logo">
+          <img src="/assets/images/logos/boxeo-utebo-logo.webp"
+               alt="Boxeo K1 Utebo - Escuela de artes marciales en Utebo(Zaragoza)" />
+        </a>
+        <h1>Boxeo K1 Utebo</h1>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/#disciplinas">Disciplinas</a></li>
+          <li><a href="/horario">Horarios</a></li>
+          <li><a href="/#precios">Precios</a></li>
+          <li><a href="/#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <div class="instalaciones-hero">
+      <div class="instalaciones-hero-content">
+        <h2>Nuestras Instalaciones</h2>
+        <p>Conoce el espacio donde entrenamos cada día</p>
+      </div>
+    </div>
+
+    <!-- CARRUSEL + MINIATURAS -->
+    <section class="instalaciones-section">
+
+      <div class="divisor">
+        <span><h2>Galería</h2></span>
+      </div>
+
+      <!-- Carrusel principal -->
+      <div class="carrusel-wrapper" id="carrusel-wrapper">
+        <div class="carrusel-track" id="carrusel-track"></div>
+        <button class="carrusel-btn prev" id="btn-prev" aria-label="Anterior">&#8592;</button>
+        <button class="carrusel-btn next" id="btn-next" aria-label="Siguiente">&#8594;</button>
+      </div>
+
+      <!-- Dots + contador -->
+      <div class="carrusel-dots" id="carrusel-dots"></div>
+      <div class="carrusel-counter" id="carrusel-counter"></div>
+
+      <!-- Miniaturas -->
+      <p class="miniaturas-titulo">Todas las fotos</p>
+      <div class="miniaturas-grid" id="miniaturas-grid"></div>
+
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imagen">
+    <button class="lightbox-cerrar" id="lb-cerrar" aria-label="Cerrar">✖</button>
+    <button class="lightbox-nav prev" id="lb-prev" aria-label="Anterior">&#8592;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption"></p>
+    <p id="lightbox-counter"></p>
+    <button class="lightbox-nav next" id="lb-next" aria-label="Siguiente">&#8594;</button>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Boxeo K1 Utebo</h3>
+        <address>
+          <p><strong>Dirección: </strong>C/ San Andrés 13, Utebo (Zaragoza)</p>
+          <p><strong>Teléfono: </strong><a href="tel:+34642061298">642 061 298</a></p>
+          <p><strong>Email: </strong><a href="mailto:boxeok1utebo@gmail.com">boxeok1utebo@gmail.com</a></p>
+        </address>
+        <div class="footer-social">
+          <p><strong>Instagram: </strong>
+            <a href="https://www.instagram.com/boxeok1utebo" target="_blank" rel="noopener">@boxeok1utebo</a></p>
+          <p><strong>Instagram: </strong>
+            <a href="https://www.instagram.com/bjj_utebo" target="_blank" rel="noopener">@bjj_utebo</a></p>
+        </div>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1489.338036099219!2d-1.0004331793831156!3d41.70592808101558!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596f00501b5acd%3A0x42067786a81bb96d!2sGimnasio%20Boxeo%20k1%20bjj%20Utebo!5e0!3m2!1ses!2ses!4v1770104732207!5m2!1ses!2ses"
+          title="Mapa ubicación Boxeo K1 Utebo"
+          allow="fullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <p>Entrenamos en Utebo, a pocos minutos de Zaragoza.</p>
+      </div>
+      <img src="/assets/images/logos/boxeo-utebo-logo.webp"
+           alt="Boxeo K1 Utebo - Escuela de artes marciales" loading="lazy" />
+    </div>
+    <div class="footer-priv">
+      <a href="/privacidad/">Política de Privacidad</a>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2026 Boxeo K1 Utebo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="/js/instalaciones.js" defer></script>
 </body>
 </html>

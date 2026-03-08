@@ -7,7 +7,7 @@ main{
   background-position: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  height: 84rem;
+  min-height: 84rem;
 }
 
 #clase-actual {
