@@ -82,13 +82,15 @@
   </main>
 
   <!-- LIGHTBOX -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imagen">
-    <button class="lightbox-cerrar" id="lb-cerrar" aria-label="Cerrar">✖</button>
-    <button class="lightbox-nav prev" id="lb-prev" aria-label="Anterior">&#8592;</button>
-    <img id="lightbox-img" src="" alt="" />
+  <div id="lightbox">
+    <button class="lightbox-cerrar" id="lb-cerrar">✕</button>
+    <div class="lightbox-img-wrapper">
+      <button class="lightbox-nav prev" id="lb-prev">‹</button>
+      <img id="lightbox-img" src="" alt="">
+      <button class="lightbox-nav next" id="lb-next">›</button>
+    </div>
     <p id="lightbox-caption"></p>
     <p id="lightbox-counter"></p>
-    <button class="lightbox-nav next" id="lb-next" aria-label="Siguiente">&#8594;</button>
   </div>
 
   <footer>
