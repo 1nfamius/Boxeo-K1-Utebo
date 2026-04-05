@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="preload" as="image" fetchpriority="high" href="/assets/images/og-image.webp">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/pages/horario.css">
-    <link rel="canonical" href="https://boxeo-k1-utebo.vercel.app/horario">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#c62828">
-
-    <meta property="og:title" content="Horarios Boxeo K1 Utebo">
-    <meta property="og:description" content="Consulta los horarios de Boxeo, K1, BJJ y más en Utebo (Zaragoza).">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://boxeo-k1-utebo.vercel.app/horario">
-    <meta property="og:image" content="/assets/images/og-image.webp">
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Horarios Boxeo K1 Utebo">
-    <meta name="twitter:description" content="Consulta los horarios de Boxeo, K1 y BJJ en Utebo. Clases para todos los niveles.">
-    <meta name="twitter:image" content="/assets/images/og-image.webp">
-
-    <meta name="description" content="Consulta los horarios de Boxeo, K1 y BJJ en Utebo (Zaragoza). Clases de lunes a sábado para todos los niveles.">
-    <title>Horarios Boxeo K1 Utebo | Clases Boxeo, K1, BJJ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/pages/entrenadores.css" />
+  <link rel="canonical" href="https://boxeo-k1-utebo.vercel.app/entrenadores" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/favicon.ico" />
+ 
+  <meta name="description" content="Conoce a los entrenadores de Boxeo K1 Utebo. Especialistas en Boxeo, K1, BJJ y K1  infantil en Utebo, Zaragoza." />
+ 
+  <title>Entrenadores | Boxeo K1 Utebo (Zaragoza)</title>
+ 
+  <script src="/js/combates.js" defer></script>
+  <script src="/js/entrenadores.js" defer></script>
 </head>
 <body>
     <header>
@@ -48,28 +35,37 @@
           <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/#disciplinas">Disciplinas</a></li>
+            <li><a href="/horario">Horarios</a></li>
             <li><a href="/#precios">Precios</a></li>
             <li><a href="/#contacto">Contacto</a></li>
             <li><a href="/instalaciones/">Instalaciones</a></li>
-            <li><a href="/entrenadores/">Entrenadores</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
+    
     <main>
-        <section class="horario">
-            <h2>Horarios</h2>
-
-            <div id="clase-actual"></div>
-            <div id="countdown"></div>
-            <nav class="horario-nav">
-                <ul id="dias-nav"></ul>
-            </nav>
-
-        <div id="tabla-horario"></div>
+    
+        <!-- Hero -->
+        <section class="entrenadores-hero">
+          <div class="entrenadores-hero-content">
+            <h2>Nuestros Entrenadores</h2>
+            <p>Profesionales con experiencia real dentro y fuera del ring</p>
+          </div>
         </section>
-    </main>
+    
+        <!-- Sección principal -->
+        <section class="entrenadores-section">
+    
+          <!-- Selector de entrenadores -->
+          <div id="entrenadores-selector" class="entrenadores-selector"></div>
+    
+          <!-- Panel de detalle -->
+          <div id="entrenador-panel" class="entrenador-panel"></div>
+    
+        </section>
+    
+      </main>
 
     <footer>
       <div class="footer-container">
@@ -111,13 +107,12 @@
             />
       </div>
       <div class="footer-priv">
-        <a href="/privacidad/">Política de Privacidad</a>
+        <a href="/privacidad/">Politica de Privacidad</a>
       </div>
       <div class="footer-copy">
         <p>&copy; 2026 Boxeo K1 Utebo. Todos los derechos reservados.</p>
       </div>
-    </footer>
 
-    <script src="/js/horario.js"></script>
+    </footer>
 </body>
 </html>

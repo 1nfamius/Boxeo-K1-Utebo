@@ -47,6 +47,8 @@
   color: var(--accent-1-color);
 }
 .hero p {
+  display: flex;
+  justify-content: center;
   font-size: 1.4rem;
   margin-bottom: 2rem;
 }
@@ -67,6 +69,7 @@
   gap: 2rem;
   max-width: 1600px;
   margin: 0 auto;
+  grid-auto-rows: 30rem;
 }
 .disciplina {
   display: flex;
@@ -87,10 +90,121 @@
 .disciplina p {
   font-size: 1rem;
   line-height: 1.6;
+  height: 5rem;
 }
 .disciplina img {
   width: 250px;
   margin-top: 1rem;
+}
+
+/* Contenedor exterior — mantiene el espacio */
+.disciplina-flip {
+  perspective: 1200px;
+  height: 100%;
+}
+
+/* Contenedor interior — es el que rota */
+.disciplina-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Flip en hover (escritorio) */
+.disciplina-flip:hover .disciplina-inner {
+  transform: rotateY(180deg);
+}
+
+/* Flip con clase JS (táctil móvil) */
+.disciplina-flip.flipped .disciplina-inner {
+  transform: rotateY(180deg);
+}
+
+/* Cara común: ambas caras se superponen */
+.disciplina-front,
+.disciplina-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* La cara frontal existente ya tiene sus estilos en home.css,
+   solo aseguramos que ocupa todo */
+.disciplina-front {
+  overflow: hidden;
+}
+
+/* Cara trasera: empieza girada 180º */
+.disciplina-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+  border: 0.1rem solid var(--disc-color);
+  border-radius: 0.5rem;
+  background-color: var(--bg-2-color);
+  background-image: radial-gradient(
+    ellipse at center,
+    color-mix(in srgb, var(--disc-color) 12%, transparent) 0%,
+    transparent 70%
+  );
+}
+
+.disciplina-back h3 {
+  color: var(--disc-color);
+  font-size: 1.6rem;
+  border-bottom: 0.1rem solid var(--disc-color);
+  padding-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.disciplina-back p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.disciplina-btn {
+  margin-top: 0.5rem;
+  background-color: var(--disc-color);
+  border: none;
+  font-size: 0.95rem;
+  color: var(--base-color);
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: filter 0.2s;
+  text-shadow: none;
+}
+.disciplina-btn:hover {
+  filter: brightness(1.2);
+  color: var(--base-color);
+}
+
+/*---------------------------------*/
+/* MEDIA QUERIES FLIP               */
+/*---------------------------------*/
+@media (max-width: 1024px) {
+  .disciplinas-grid {
+    grid-auto-rows: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .disciplinas-grid {
+    grid-auto-rows: 30rem;
+  }
 }
 
 /*---------------------------------*/

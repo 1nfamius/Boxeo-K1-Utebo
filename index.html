@@ -47,7 +47,7 @@
   }
 </script>
     <meta property="og:title" content="Boxeo K1 Utebo | Escuela de Boxeo, K1 y BJJ en Utebo">
-    <meta property="og:description" content="Gimnasio de Boxeo, K1, Muay Thai infantil, Pilates y Brazilian Jiu-Jitsu en Utebo. Clases para niños y adultos.">
+    <meta property="og:description" content="Gimnasio de Boxeo, K1, K1 infantil, Pilates y Brazilian Jiu-Jitsu en Utebo. Clases para niños y adultos.">
     <meta property="og:image" content="https://boxeo-k1-utebo.vercel.app/assets/images/og-image.jpg">
     <meta property="og:url" content="https://boxeo-k1-utebo.vercel.app">
     <meta property="og:type" content="website">
@@ -58,7 +58,7 @@
     <meta name="twitter:image" content="https://boxeo-k1-utebo.vercel.app/assets/images/og-image.jpg">
     <meta
       name="description"
-      content="Gimnasio de Boxeo, K1, Muay Thai infantil, Pilates y Brazilian Jiu-Jitsu en Utebo, Zaragoza. Clases para niños y adultos, todos los niveles."
+      content="Gimnasio de Boxeo, K1, K1  infantil, Pilates y Brazilian Jiu-Jitsu en Utebo, Zaragoza. Clases para niños y adultos, todos los niveles."
     />
     <link rel="icon" href="/favicon.ico"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -87,6 +87,7 @@
             <li><a href="#precios">Precios</a></li>
             <li><a href="#contacto">Contacto</a></li>
             <li><a href="/instalaciones/">Instalaciones</a></li>
+            <li><a href="/entrenadores/">Entrenadores</a></li>
           </ul>
         </nav>
       </div>
@@ -101,76 +102,124 @@
           <img id="cartelera-img" src="" alt="Cartelera del combate" loading="lazy"/>
         </div>
       </div>
+
       <section id="inicio" class="hero">
         <div class="hero-content">
           <h2>Boxeo, K1 y Brazilian Jiu-Jitsu en Utebo</h2>
-          <p>
-            Entrena con profesionales, mejora tu técnica y alcanza tus
-            objetivos.
-          </p>
-          <a href="#disciplinas" class="btn-cta">Ver actividades</a>
+          <p>El primer golpe lo damos nosotros. Tu primera clase es gratis.</p>
+          <a href="#contacto" class="btn-cta">Reserva tu clase gratis</a>
         </div>
       </section>
 
-      <section id="disciplinas" class="disciplinas">
+  <section id="disciplinas" class="disciplinas">
         <div class="divisor">
           <span><h2>Disciplinas</h2></span>
         </div>
-
+ 
         <div class="disciplinas-grid">
-          <article class="disciplina">
-            <h3>Boxeo</h3>
-            <p>
-              Entrenamientos de boxeo para todos los niveles, desde iniciación
-              hasta competición, enfocados en técnica, condición física y
-              disciplina.
-            </p>
-            <img
-              src="/assets/images/logos/boxeo-utebo-logo.webp"
-              alt="BD-Kraken-Brazilian Jiu-Jitsu(BJJ) Escuela de artes marciales"
-              loading="lazy"
-            />
-          </article>
-
-          <article class="disciplina">
-            <h3>K1</h3>
-            <p>
-              K1 orientado a la mejora técnica y al trabajo competitivo,
-              combinando striking, potencia y control del combate.
-            </p>
-            <img
-              src="/assets/images/logos/k1-utebo-logo.webp"
-              alt="BD-Kraken-Brazilian Jiu-Jitsu(BJJ) Escuela de artes marciales"
-              loading="lazy"
-            />
-          </article>
-
-          <article class="disciplina">
-            <h3>Brazilian Jiu-Jitsu</h3>
-            <p>
-              BJJ estilo BD-Kraken centrado en el trabajo de suelo, control y
-              sumisiones, ideal para defensa personal y competición.
-            </p>
-            <img
-              src="/assets/images/logos/bd-kraken-bjj-logo.webp"
-              alt="Logo de la academia BD Kraken Brazilian Jiu-Jitsu"
-              loading="lazy"
-            />
-          </article>
-
-          <article class="disciplina">
-            <h3>Muay Thai Kids</h3>
-            <p>
-              Clases de Muay Thai adaptadas a niños, enfocadas en coordinación, disciplina
-              y confianza, combinando técnica básica con trabajo físico en un entorno
-              seguro y motivador.
-            </p>
-            <img
-              src="/assets/images/logos/muay-thai-kids-logo.webp"
-              alt="Logo de la academia BD Kraken Brazilian Jiu-Jitsu"
-              loading="lazy"
-            />
-          </article>
+ 
+          <!-- BOXEO -->
+          <div class="disciplina-flip">
+            <div class="disciplina-inner">
+              <article class="disciplina disciplina-front">
+                <h3>Boxeo</h3>
+                <p>
+                  Entrenamientos de boxeo para todos los niveles, desde iniciación
+                  hasta competición, enfocados en técnica, condición física y
+                  disciplina.
+                </p>
+                <img
+                  src="/assets/images/logos/boxeo-utebo-logo.webp"
+                  alt="Logo Boxeo K1 Utebo"
+                  loading="lazy"
+                />
+              </article>
+              <div class="disciplina disciplina-back" style="--disc-color: var(--boxeo-color)">
+                <h3>Boxeo</h3>
+                <p>
+                  El arte de golpear y no ser golpeado. Técnica de puños, movimiento y guardia para todos los niveles. Mejora la coordinación, la resistencia y la disciplina tanto dentro como fuera del ring.
+                </p>
+                <a href="/entrenadores#boxeo" class="btn-cta disciplina-btn">Ver entrenador</a>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- K1 -->
+          <div class="disciplina-flip">
+            <div class="disciplina-inner">
+              <article class="disciplina disciplina-front">
+                <h3>K1</h3>
+                <p>
+                  K1 orientado a la mejora técnica y al trabajo competitivo,
+                  combinando striking, potencia y control del combate.
+                </p>
+                <img
+                  src="/assets/images/logos/k1-utebo-logo.webp"
+                  alt="Logo K1 Utebo"
+                  loading="lazy"
+                />
+              </article>
+              <div class="disciplina disciplina-back" style="--disc-color: var(--k1-color)">
+                <h3>K1</h3>
+                <p>
+                  Kickboxing que combina puños y patadas en un deporte explosivo y técnico. Desarrolla potencia, velocidad de reacción y resistencia. Accesible desde el primer día, muy orientado a la competición.
+                </p>
+                <a href="/entrenadores#k1" class="btn-cta disciplina-btn">Ver entrenador</a>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- BJJ -->
+          <div class="disciplina-flip">
+            <div class="disciplina-inner">
+              <article class="disciplina disciplina-front">
+                <h3>Brazilian Jiu-Jitsu</h3>
+                <p>
+                  BJJ estilo BD-Kraken centrado en el trabajo de suelo, control y
+                  sumisiones, ideal para defensa personal y competición.
+                </p>
+                <img
+                  src="/assets/images/logos/bd-kraken-bjj-logo.webp"
+                  alt="Logo BD Kraken Brazilian Jiu-Jitsu"
+                  loading="lazy"
+                />
+              </article>
+              <div class="disciplina disciplina-back" style="--disc-color: var(--bjj-color)">
+                <h3>Brazilian Jiu-Jitsu</h3>
+                <p>
+                  Arte marcial de suelo donde la técnica vence a la fuerza. Control, palancas y sumisiones para dominar al rival sin importar el tamaño. El ajedrez de los deportes de combate.
+                </p>
+                <a href="/entrenadores#bjj" class="btn-cta disciplina-btn">Ver entrenador</a>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- K1  KIDS -->
+          <div class="disciplina-flip">
+            <div class="disciplina-inner">
+              <article class="disciplina disciplina-front">
+                <h3>K1  Kids</h3>
+                <p>
+                  Clases de K1  adaptadas a niños, enfocadas en coordinación, disciplina
+                  y confianza, combinando técnica básica con trabajo físico en un entorno
+                  seguro
+                </p>
+                <img
+                  src="/assets/images/logos/muay-thai-kids-logo.webp"
+                  alt="Logo K1  Kids Utebo"
+                  loading="lazy"
+                />
+              </article>
+              <div class="disciplina disciplina-back" style="--disc-color: var(--mtk-color)">
+                <h3>K1  Kids</h3>
+                <p>
+                  Kickboxing adaptado para niños donde aprenden a golpear con control, moverse y defenderse de forma segura. A través de juegos, técnica básica y disciplina, desarrollan coordinación, confianza y respeto mientras se divierten practicando deporte.
+                </p>
+                <a href="/entrenadores#muaythai" class="btn-cta disciplina-btn">Ver entrenador</a>
+              </div>
+            </div>
+          </div>
+ 
         </div>
       </section>
 
@@ -181,7 +230,7 @@
         <div class="horario-grid">
           <article class="dia">
             <h3>LUNES</h3>
-            <p><strong class="mtk">Muay Thai Kids</strong> · 16:30 - 17:30</p>
+            <p><strong class="mtk">K1  Kids</strong> · 16:30 - 17:30</p>
             <p><strong class="pilates">Pilates</strong> · 17:30 - 18:30</p>
             <p><strong class="k1">K1</strong> · 18:30 - 19:45</p>
             <p><strong class="boxeo">Boxeo</strong> · 19:45 - 21:00</p>
@@ -202,7 +251,7 @@
           <article class="dia">
             <h3>MIERCOLES</h3>
             <p><strong class="boxeo">Boxeo</strong> · 10:00 - 11:15</p>
-            <p><strong class="mtk">Muay Thai Kids</strong> · 16:30 - 17:30</p>
+            <p><strong class="mtk">K1  Kids</strong> · 16:30 - 17:30</p>
             <p><strong class="pilates">Pilates</strong> · 17:30 - 18:30</p>
             <p><strong class="k1">K1</strong> · 18:30 - 19:45</p>
             <p><strong class="boxeo">Boxeo</strong> · 19:45 - 21:00</p>
@@ -222,7 +271,7 @@
 
           <article class="dia">
             <h3>VIERNES</h3>
-            <p><strong class="mtk">Muay Thai Kids</strong> · 16:30 - 17:30</p>
+            <p><strong class="mtk">K1  Kids</strong> · 16:30 - 17:30</p>
             <p>
               <strong class="competicion">K1 Competición</strong> · 17:30 -
               18:30
@@ -272,7 +321,7 @@
           </article>
 
           <article class="precio-card destacado">
-            <h3>Muay Thai Kids</h3>
+            <h3>K1  Kids</h3>
             <p class="precio">40€ / mes</p>
             <p>3 días por semana</p>
           </article>
@@ -283,7 +332,7 @@
         <div class="divisor">
           <span><h2>Contacto</h2></span>
         </div>
-
+        <h3>Rellena esto, ven un día y decide después. Sin cuotas, sin presiones. Solo tú y el entrenamiento.</h3>
         <div class="contacto-grid">
           <form action="https://formspree.io/f/xykprbqp" method="POST">
 
@@ -383,7 +432,7 @@
         <a href="/privacidad/">Politica de Privacidad</a>
       </div>
       <div class="footer-copy">
-        <p>&copy; 2026 Boxeo K1 Utebo. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Boxeo K1 Utebo · Todos los derechos reservados.</p>
       </div>
 
     </footer>

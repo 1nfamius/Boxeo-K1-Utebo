@@ -1,0 +1,96 @@
+[
+  {
+    "id": "boxeo",
+    "nombre": "Sergio Mateo",
+    "disciplina": "Boxeo",
+    "color": "var(--boxeo-color)",
+    "foto_avatar": "/assets/images/entrenadores/Sergio.webp",
+    "foto_panel": "/assets/images/entrenadores/Sergio.webp",
+    "edad": 45,
+    "origen": "España",
+    "desde": "???",
+    "experiencia": 8,
+    "competidor": false,
+    "estilo": "Todo tipo de alumnos, desde los más pequeños hasta adultos de todas las edades.",
+    "historia": ["???"],
+    "alumnos": "Desde 5 hasta 55 años, todos los niveles y perfiles.",
+    "frase": "El boxeo no es solo pegar, es pensar más rápido que el rival.",
+    "titulos": [
+      "44 combates amateur",
+      "21 combates como boxeador profesional",
+      "Retirado del boxeo profesional en 2018"
+    ],
+    "instagram": "https://www.instagram.com/boxeok1utebo/"
+  },
+  {
+    "id": "k1",
+    "nombre": "Jesus Soriano Marco",
+    "disciplina": "K1",
+    "color": "var(--k1-color)",
+    "foto_avatar": "/assets/images/entrenadores/Jesus.webp",
+    "foto_panel": "/assets/images/entrenadores/Jesus.webp",
+    "edad": "???",
+    "origen": "España",
+    "desde": "???",
+    "experiencia": "???",
+    "competidor": false,
+    "estilo": "???",
+    "historia": ["???"],
+    "alumnos": "???",
+    "titulos": [
+      "???"
+    ],
+    "instagram": "https://www.instagram.com/jesussorianomarco"
+  },
+  {
+    "id": "grappling",
+    "nombre": "Costel Blahuianu",
+    "disciplina": "BJJ",
+    "color": "var(--bjj-color)",
+    "foto_avatar": "/assets/images/entrenadores/avatar/Costel-avatar.webp",
+    "foto_panel": "/assets/images/entrenadores/Costel.webp",
+    "edad": 34,
+    "origen": "Rumanía",
+    "desde": 2011,
+    "experiencia": 2,
+    "competidor": true,
+    "estilo": "Disciplina, trabajo duro y resultados reales. Cada entrenamiento adaptado para que progreses de forma constante.",
+    "historia": [
+      "Empecé en 2011 con Taekwondo y con el tiempo evolucioné hacia Kickboxing, MMA y Grappling.",
+      "Campeón de España de Kickboxing en 2015 y medallista reciente en el Open de Zaragoza.",
+      "Actualmente cinturón marrón de BJJ (1º grado) e instructor nacional de Grappling Gi y No-Gi reconocido por FELUCHA y FALODA."
+    ],
+    "alumnos": "Desde principiantes hasta niveles avanzados, adaptando cada entrenamiento para que progreses de forma constante.",
+    "titulos": [
+      "Campeón de España de Kickboxing 2015",
+      "Medallista Open de Zaragoza",
+      "Cinturón Marrón BJJ 1º Grado",
+      "Instructor Nacional de Grappling (FELUCHA)",
+      "Instructor Federación Aragonesa de Lucha (FALODA)"
+    ],
+    "lema": "Persistir, nunca desistir",
+    "instagram": "https://www.instagram.com/costel_b.8/"
+  },
+  {
+    "id": "k1infantil",
+    "nombre": "Sofía",
+    "disciplina": "K1 Infantil",
+    "color": "var(--mtk-color)",
+    "foto_avatar": "/assets/images/entrenadores/avatar/Sofia-avatar.webp",
+    "foto_panel": "/assets/images/entrenadores/Sofia.webp",
+    "edad": 22,
+    "origen": "España",
+    "desde": 7,
+    "experiencia": 1,
+    "competidor": false,
+    "historia": ["Decidí empezar en K1 porque quería explorar una nueva modalidad que me llamaba mucho la atención. Desde el primer momento me enganchó la disciplina y la técnica, y disfruto cada entrenamiento mientras sigo creciendo como deportista y ayudando a otros a aprender y mejorar."],
+    "estilo": "Cercano, dinámico y motivador. Crea un ambiente donde los niños se sientan cómodos y disfruten. Trabaja valores como el respeto, la disciplina y la confianza, enseñándoles a canalizar su energía de forma positiva.",
+    "alumnos": "Alumnos infantiles de 4 a 11 años, adaptando las clases a cada edad y nivel.",
+    "frase": "El deporte te enseña a caerte y levantarte, dentro y fuera del tatami.",
+    "titulos": [
+      "Más de 13 años de experiencia en deportes de combate",
+      "Trayectoria competitiva en Taekwondo a nivel regional, nacional y europeo"
+    ],
+    "instagram": "https://www.instagram.com/sofiiaa.tb/"
+  }
+]
