@@ -6,7 +6,7 @@
     
     <link rel="preload" as="image" fetchpriority="high" href="/assets/images/og-image.webp">
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/pages/horario.css">
+    <link rel="stylesheet" href="/horario/css/horario.css">
     <link rel="canonical" href="https://boxeo-k1-utebo.vercel.app/horario">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,16 +45,30 @@
           <h1>Boxeo K1 Utebo</h1>
         </div>
         <nav aria-label="Navegación principal">
-          <ul>
-            <li><a href="/">Inicio</a></li>
+          <ul class="nav-links" id="nav-links">
             <li><a href="/#disciplinas">Disciplinas</a></li>
             <li><a href="/#precios">Precios</a></li>
             <li><a href="/#contacto">Contacto</a></li>
             <li><a href="/instalaciones/">Instalaciones</a></li>
             <li><a href="/entrenadores/">Entrenadores</a></li>
+            <li><a href="/noticias/" class="nav-active">Noticias</a></li>
           </ul>
+          <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
       </div>
+      <!-- Menú móvil -->
+      <ul class="nav-mobile" id="nav-mobile" aria-hidden="true">
+        <li><a href="/#disciplinas">Disciplinas</a></li>
+        <li><a href="/#precios">Precios</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+        <li><a href="/instalaciones/">Instalaciones</a></li>
+        <li><a href="/entrenadores/">Entrenadores</a></li>
+        <li><a href="/noticias/" class="nav-active">Noticias</a></li>
+      </ul>
     </header>
 
     <main>
@@ -118,6 +132,7 @@
       </div>
     </footer>
 
-    <script src="/js/horario.js"></script>
+    <script src="/horario/js/horario.js"></script>
+    <script src="/js/hamburger.js"></script>
 </body>
 </html>

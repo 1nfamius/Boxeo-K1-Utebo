@@ -287,6 +287,87 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ==============================================
+   HAMBURGER MENU 
+   ============================================== */
+
+/* El botón hamburger está oculto en escritorio */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--base-color);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animación X al abrir */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Menú móvil — oculto por defecto */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: var(--bg-1-color);
+  border-bottom: 0.1rem solid var(--accent-1-color);
+  list-style: none;
+  padding: 0;
+}
+
+.nav-mobile.open {
+  display: flex;
+}
+
+.nav-mobile li {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-mobile li:last-child {
+  border-bottom: none;
+}
+
+.nav-mobile a {
+  display: block;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--base-color);
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-mobile a:hover,
+.nav-mobile a:focus-visible {
+  color: var(--accent-2-color);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-mobile .nav-active {
+  color: var(--accent-2-color);
+}
+
 /*---------------------------------*/
 /* MEDIA QUERIES GENERALES          */
 /*---------------------------------*/
@@ -321,5 +402,14 @@ footer {
   }
   .footer-container img{
     width: 16rem;
+  }
+    /* Ocultar nav normal en móvil */
+  .header-container nav ul.nav-links {
+    display: none;
+  }
+
+  /* Mostrar hamburger */
+  .hamburger {
+    display: flex;
   }
 }

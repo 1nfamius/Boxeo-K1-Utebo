@@ -4,7 +4,7 @@ let autoplay       = null;
 let fotos          = [];
 
 async function cargarInstalaciones() {
-  const res = await fetch("/data/instalaciones.json");
+  const res = await fetch("/instalaciones/data/instalaciones.json");
   fotos = await res.json();
 
   if (!fotos.length) return;

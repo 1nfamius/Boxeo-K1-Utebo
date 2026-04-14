@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  
   <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/pages/entrenadores.css" />
+  <link rel="stylesheet" href="/entrenadores/css/entrenadores.css" />
   <link rel="canonical" href="https://boxeo-k1-utebo.vercel.app/entrenadores" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +16,7 @@
  
   <title>Entrenadores | Boxeo K1 Utebo (Zaragoza)</title>
  
-  <script src="/js/combates.js" defer></script>
-  <script src="/js/entrenadores.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -32,16 +31,30 @@
           <h1>Boxeo K1 Utebo</h1>
         </div>
         <nav aria-label="Navegación principal">
-          <ul>
-            <li><a href="/">Inicio</a></li>
+          <ul class="nav-links" id="nav-links">
             <li><a href="/#disciplinas">Disciplinas</a></li>
             <li><a href="/horario">Horarios</a></li>
             <li><a href="/#precios">Precios</a></li>
             <li><a href="/#contacto">Contacto</a></li>
             <li><a href="/instalaciones/">Instalaciones</a></li>
+            <li><a href="/noticias/" class="nav-active">Noticias</a></li>
           </ul>
+          <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
       </div>
+      <!-- Menú móvil -->
+      <ul class="nav-mobile" id="nav-mobile" aria-hidden="true">
+        <li><a href="/#disciplinas">Disciplinas</a></li>
+        <li><a href="/horario">Horarios</a></li>
+        <li><a href="/#precios">Precios</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+        <li><a href="/instalaciones/">Instalaciones</a></li>
+        <li><a href="/noticias/" class="nav-active">Noticias</a></li>
+      </ul>
     </header>
     
     <main>
@@ -65,8 +78,7 @@
     
         </section>
     
-      </main>
-
+    </main>
     <footer>
       <div class="footer-container">
         <div class="footer-info">
@@ -114,5 +126,7 @@
       </div>
 
     </footer>
+    <script src="/entrenadores/js/entrenadores.js" defer></script>
+    <script src="/js/hamburger.js" defer></script>
 </body>
 </html>

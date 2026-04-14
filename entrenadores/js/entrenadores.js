@@ -2,7 +2,7 @@ let entrenadores = [];
 let seleccionado  = null;
 
 async function cargarEntrenadores() {
-  const res = await fetch("/data/entrenadores.json");
+  const res = await fetch("/entrenadores/data/entrenadores.json");
   entrenadores = await res.json();
 
   if (!entrenadores.length) return;

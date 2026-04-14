@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/base.css"/>
+    <link rel="stylesheet" href="/noticias/css/noticias.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1f1f1f">
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Boxeo K1 Utebo"/>
+    <meta property="og:title" content="Noticias y Eventos | Boxeo K1 Utebo">
+    <meta property="og:description" content="Últimas noticias, resultados de combates y eventos del gimnasio Boxeo K1 Utebo en Utebo, Zaragoza.">
+    <meta property="og:url" content="https://boxeo-k1-utebo.vercel.app/noticias/">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Noticias, resultados y eventos de Boxeo K1 Utebo. Entérate de todo lo que pasa en el gimnasio." />
+    <link rel="icon" href="/favicon.ico"/>
+    <title>Noticias y Eventos | Boxeo K1 Utebo</title>
+    
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="brand">
+          <a href="https://boxeo-k1-utebo.vercel.app" class="logo">
+            <img
+              src="/assets/images/logos/boxeo-utebo-logo.webp"
+              alt="Boxeo K1 Utebo - Escuela de artes marciales en Utebo(Zaragoza)"
+            />
+          </a>
+          <h1>Boxeo K1 Utebo</h1>
+        </div>
+        <nav aria-label="Navegación principal">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="/#disciplinas">Disciplinas</a></li>
+            <li><a href="/horario">Horarios</a></li>
+            <li><a href="/#precios">Precios</a></li>
+            <li><a href="/#contacto">Contacto</a></li>
+            <li><a href="/instalaciones/">Instalaciones</a></li>
+            <li><a href="/entrenadores/">Entrenadores</a></li>
+            <li><a href="/noticias/" class="nav-active">Noticias</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+      <!-- Menú móvil -->
+      <ul class="nav-mobile" id="nav-mobile" aria-hidden="true">
+        <li><a href="/#disciplinas">Disciplinas</a></li>
+        <li><a href="/horario">Horarios</a></li>
+        <li><a href="/#precios">Precios</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+        <li><a href="/instalaciones/">Instalaciones</a></li>
+        <li><a href="/entrenadores/">Entrenadores</a></li>
+        <li><a href="/noticias/" class="nav-active">Noticias</a></li>
+      </ul>
+    </header>
+
+    <main class="noticias-main">
+
+      <div class="divisor">
+        <span><h2>Noticias y Eventos</h2></span>
+      </div>
+
+      <!-- FILTROS -->
+      <div class="filtros">
+        <button class="filtro-btn active" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="noticia">Noticias</button>
+        <button class="filtro-btn" data-filtro="evento">Eventos</button>
+        <button class="filtro-btn" data-filtro="resultado">Resultados</button>
+        <button class="filtro-btn" data-filtro="comunicado">Comunicados</button>
+      </div>
+
+      <!-- GRID DE NOTICIAS -->
+      <div class="noticias-grid" id="noticias-grid">
+        <div class="loading">Cargando noticias...</div>
+      </div>
+
+      <!-- OVERLAY + MODAL -->
+      <div class="noticia-overlay" id="noticia-overlay" onclick="closeNoticia()"></div>
+      <div class="noticia-modal" id="noticia-modal" role="dialog" aria-modal="true" aria-labelledby="noticia-modal-titulo">
+        <button class="noticia-close" onclick="closeNoticia()" aria-label="Cerrar noticia">✖</button>
+        <div class="noticia-modal-content" id="noticia-modal-content"></div>
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3>Boxeo K1 Utebo</h3>
+          <address>
+            <p><strong>Dirección: </strong>C/ San Andrés 13, Utebo (Zaragoza)</p>
+            <p><strong>Teléfono: </strong><a href="tel:+34642061298">642 061 298</a></p>
+            <p><strong>Email: </strong><a href="mailto:boxeok1utebo@gmail.com">boxeok1utebo@gmail.com</a></p>
+          </address>
+          <div class="footer-social">
+            <p><strong>Instagram: </strong><a href="https://www.instagram.com/boxeok1utebo" target="_blank" rel="noopener" referrerpolicy="no-referrer-when-downgrade">@boxeok1utebo</a></p>
+            <p><strong>Instagram: </strong><a href="https://www.instagram.com/bjj_utebo" target="_blank" rel="noopener" referrerpolicy="no-referrer-when-downgrade">@bjj_utebo</a></p>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1489.338036099219!2d-1.0004331793831156!3d41.70592808101558!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd596f00501b5acd%3A0x42067786a81bb96d!2sGimnasio%20Boxeo%20k1%20bjj%20Utebo!5e0!3m2!1ses!2ses!4v1770104732207!5m2!1ses!2ses"
+            title="Mapa ubicación Boxeo K1 Utebo"
+            allow="fullscreen"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p>Entrenamos en Utebo, a pocos minutos de Zaragoza, en un ambiente cercano y enfocado tanto a la iniciación como a la competición.</p>
+        </div>
+        <img
+          src="/assets/images/logos/boxeo-utebo-logo.webp"
+          alt="Boxeo K1 Utebo - Escuela de artes marciales"
+          loading="lazy"
+        />
+      </div>
+      <div class="footer-priv">
+        <a href="/privacidad/">Política de Privacidad</a>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 Boxeo K1 Utebo · Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/noticias/js/noticias.js"></script>
+    <script src="/js/hamburger.js"></script>
+  </body>
+</html>
