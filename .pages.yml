@@ -34,6 +34,8 @@ content:
               label: Resultado
             - name: comunicado
               label: Comunicado
+            - name: combate
+              label: Combate
               
       - name: imagen
         label: Imagen destacada
@@ -46,12 +48,3 @@ content:
       - name: body
         label: Contenido
         type: rich-text
-
-  - name: "noticias-index"
-    label: "Índice de noticias"
-    type: "file"
-    path: "content/noticias/index.json"
-    fields:
-      - name: "body"
-        label: "Lista"
-        type: "code"
