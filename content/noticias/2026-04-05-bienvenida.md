@@ -1,7 +1,7 @@
 ---
 titulo: Bienvenidos a la nueva web de Cachorros Boxing Club
 fecha: 2026-04-05
-tipo: noticia
+tipo: combate
 imagen: /assets/images/logos/boxeo-utebo-logo.webp
 resumen: Estrenamos nueva web con toda la información del club, horarios,
   disciplinas y tienda oficial.
