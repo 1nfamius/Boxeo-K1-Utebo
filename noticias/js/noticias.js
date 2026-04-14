@@ -170,7 +170,8 @@ function labelTipo(tipo) {
     noticia: "Noticia",
     evento: "Evento",
     resultado: "Resultado",
-    comunicado: "Comunicado"
+    comunicado: "Comunicado",
+    combate: "Combate"
   };
   return labels[tipo] || tipo || "Noticia";
 }
