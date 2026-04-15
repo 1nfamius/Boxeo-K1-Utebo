@@ -1,49 +1,52 @@
+// combates.js — Fight bar conectada con Pages CMS
 async function cargarFightBar() {
-  const res = await fetch("/data/combates.json");
-  const combates = await res.json();
+  let combates;
+  try {
+    const res = await fetch("/api/combates-index");
+    if (!res.ok) throw new Error();
+    combates = await res.json();
+  } catch {
+    return; // Sin datos, la barra no aparece
+  }
 
   if (!combates.length) return;
 
-  const hoy = new Date();
-
-  const futuros = combates
-    .map(c => ({
-      ...c,
-      fechaObj: new Date(c.fecha + "T" + c.hora)
-    }))
-    .filter(c => c.fechaObj >= hoy)
-    .sort((a, b) => a.fechaObj - b.fechaObj);
-
-  if (!futuros.length) return;
-
   let index = 0;
   const container = document.getElementById("fight-bar-container");
+  const cartelaImg = document.getElementById("cartelera-img");
 
   function renderCombate(combate) {
-    const ahora = new Date();
-    const diff = combate.fechaObj - ahora;
+    const fechaObj = new Date(combate.fecha + "T" + combate.hora);
+    const ahora    = new Date();
+    const diff     = fechaObj - ahora;
 
-    let estado = "PRÓXIMA PELEA";
-    let countdownHTML = "";
+    const esHoy = diff > -86400000 && diff <= 0;
+    const esFuturo = diff > 0;
 
-    if (diff <= 0 && diff > -86400000) {
-      estado = "🔥 HOY HAY COMBATE 🔥";
-    } else {
-      countdownHTML = `<span class="fight-countdown" id="countdown"></span>`;
-    }
+    const label = esHoy
+      ? "🔥 HOY HAY COMBATE 🔥"
+      : esFuturo
+        ? "PRÓXIMA PELEA"
+        : "RESULTADO";
 
-    const fechaTexto = combate.fechaObj.toLocaleDateString("es-ES", {
-      day: "numeric",
-      month: "long"
+    const fechaTexto = fechaObj.toLocaleDateString("es-ES", {
+      day: "numeric", month: "long"
     });
+
+    const countdownHTML = esFuturo
+      ? `<span class="fight-countdown" id="countdown"></span>`
+      : "";
+
+    // Título del evento si existe (campo titulo) o fallback peleador vs rival
+    const titulo = combate.peleador && combate.rival
+      ? `${combate.peleador} <span class="fight-vs">VS</span> ${combate.rival}`
+      : combate.titulo || "";
 
     container.innerHTML = `
       <div class="fight-bar">
-        <a href="#cartelera" class="fight-link">
-          <span class="fight-label">${estado}</span>
-          <span class="fight-main">
-            ${combate.peleador} vs ${combate.rival}
-          </span>
+        <a href="${combate.imagen ? '#cartelera' : '#'}" class="fight-link">
+          <span class="fight-label">${label}</span>
+          <span class="fight-main">${titulo}</span>
           <span class="fight-extra">
             📍 ${combate.lugar} · 🗓️ ${fechaTexto} · 🕘 ${combate.hora}
           </span>
@@ -52,43 +55,43 @@ async function cargarFightBar() {
       </div>
     `;
 
-    document.getElementById("cartelera-img").src = combate.cartelera;
-
-    if (diff > 0) iniciarCountdown(combate.fechaObj);
-  }
-
-  function iniciarCountdown(fechaObjetivo) {
-    const el = document.getElementById("countdown");
-    if (!el) return;
-
-    function actualizar() {
-      const ahora = new Date();
-      const diff = fechaObjetivo - ahora;
-
-      if (diff <= 0) {
-        el.innerHTML = "🔥 EN CURSO 🔥";
-        return;
-      }
-
-      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutos = Math.floor((diff / (1000 * 60)) % 60);
-      const segundos = Math.floor((diff / 1000) % 60);
-
-      el.innerHTML = `⏳ ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    // Actualiza imagen del modal si existe
+    if (cartelaImg) {
+      cartelaImg.src = combate.imagen || "";
     }
 
-    actualizar();
-    setInterval(actualizar, 1000);
+    // Lanza countdown si es futuro
+    if (esFuturo) iniciarCountdown(fechaObj);
   }
 
-  renderCombate(futuros[index]);
+  function iniciarCountdown(fechaObj) {
+    const el = document.getElementById("countdown");
+    if (!el) return;
+    const tick = () => {
+      const diff = fechaObj - new Date();
+      if (diff <= 0) { el.innerHTML = "🔥 EN CURSO 🔥"; return; }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff / 3600000) % 24);
+      const m = Math.floor((diff / 60000) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      el.innerHTML = `⏳ ${d}d ${h}h ${m}m ${s}s`;
+    };
+    tick();
+    const timer = setInterval(tick, 1000);
+    // Limpia el timer si hay carrusel y cambia de slide
+    el._timer = timer;
+  }
 
-  // Carrusel automático cada 6 segundos
-  if (futuros.length > 1) {
+  renderCombate(combates[index]);
+
+  // Carrusel automático si hay más de uno
+  if (combates.length > 1) {
     setInterval(() => {
-      index = (index + 1) % futuros.length;
-      renderCombate(futuros[index]);
+      // Limpia countdown anterior
+      const prev = document.getElementById("countdown");
+      if (prev?._timer) clearInterval(prev._timer);
+      index = (index + 1) % combates.length;
+      renderCombate(combates[index]);
     }, 8000);
   }
 }

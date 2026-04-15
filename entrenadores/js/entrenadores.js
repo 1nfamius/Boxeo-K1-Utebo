@@ -112,7 +112,7 @@ function mostrarEntrenador(i) {
       <div class="panel-info">
         <div class="panel-meta">
           <span class="panel-meta-item">📍 <span>${e.origen}</span></span>
-          <span class="panel-meta-item">🥋 <span>Practicando desde los ${e.desde} años</span></span>
+          <span class="panel-meta-item">🥋 <span>Practicando desde ${e.desde}</span></span>
           <span class="panel-meta-item">📅 <span>${e.experiencia} años de experiencia enseñando</span></span>
           ${e.edad ? `<span class="panel-meta-item">👤 <span>${e.edad} años</span></span>` : ""}
           ${competidorBadge}

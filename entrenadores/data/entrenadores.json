@@ -29,16 +29,22 @@
     "color": "var(--k1-color)",
     "foto_avatar": "/assets/images/entrenadores/Jesus.webp",
     "foto_panel": "/assets/images/entrenadores/Jesus.webp",
-    "edad": "???",
+    "edad": "48",
     "origen": "España",
-    "desde": "???",
-    "experiencia": "???",
+    "desde": "1997",
+    "experiencia": "Más de 25 años en deportes de contacto, iniciándose en K-1 a los 19 años y con base en boxeo.",
     "competidor": false,
-    "estilo": "???",
-    "historia": ["???"],
-    "alumnos": "???",
+    "estilo": "K-1 con base en boxeo",
+    "historia": [
+      "Comenzó a practicar K-1 a los 19 años.",
+      "En 2001 fue subcampeón de Aragón.",
+      "Ese mismo año fue subcampeón de España en Alcorcón (Madrid).",
+      "Siempre ha estado vinculado a los deportes de contacto, especialmente al boxeo, aunque no llegó a competir en esta disciplina."
+    ],
+    "alumnos": "Formación de alumnos en disciplinas de contacto con enfoque en técnica y experiencia práctica.",
     "titulos": [
-      "???"
+      "Subcampeón de Aragón de K-1 (2001)",
+      "Subcampeón de España de K-1 (2001)"
     ],
     "instagram": "https://www.instagram.com/jesussorianomarco"
   },

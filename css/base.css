@@ -373,8 +373,9 @@ footer {
 /*---------------------------------*/
 @media (max-width: 1024px) {
   .header-container {
-    flex-direction: column;
+    flex-direction: row;
     padding: 0.5rem 0;
+    justify-content: space-evenly;
   }
   .header-container nav ul {
     flex-wrap: wrap;
