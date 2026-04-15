@@ -48,3 +48,24 @@ content:
       - name: body
         label: Contenido
         type: rich-text
+        
+      - name: peleador
+        label: Nuestro peleador
+        type: string
+      - name: rival
+        label: Rival
+        type: string
+      - name: lugar
+        label: Lugar del combate
+        type: string
+      - name: hora_combate
+        label: Hora del combate
+        type: string
+        description: "Formato HH:MM (ej: 20:00)"
+      - name: cartelera
+        label: Cartelera (imagen)
+        type: image
+      - name: fecha_combate
+        label: Fecha del combate
+        type: date
+        description: "Si es distinta a la fecha de publicación"
