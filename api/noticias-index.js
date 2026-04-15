@@ -19,37 +19,17 @@ function parseFrontmatter(texto) {
 module.exports = (req, res) => {
   try {
     const dir = path.join(process.cwd(), "content", "noticias");
-    if (!fs.existsSync(dir)) return res.status(200).json([]);
+    if (!fs.existsSync(dir)) {
+      return res.status(200).json([]);
+    }
+    const archivos = fs.readdirSync(dir)
+      .filter(f => f.endsWith(".md"))
+      .sort()
+      .reverse();
 
-    const archivos = fs.readdirSync(dir).filter(f => f.endsWith(".md"));
-
-    const combates = archivos
-      .map(archivo => {
-        const texto = fs.readFileSync(path.join(dir, archivo), "utf-8");
-        const data = parseFrontmatter(texto);
-        if (!data || data.tipo !== "combate") return null;
-        return {
-          titulo:       data.titulo       || "",
-          peleador:     data.peleador     || "",
-          rival:        data.rival        || "",
-          lugar:        data.lugar        || "",
-          hora:         data.hora_combate || "20:00",
-          fecha:        data.fecha_combate || data.fecha || "",
-          imagen:       data.imagen       || "",   // imagen destacada = cartelera
-          resumen:      data.resumen      || "",
-        };
-      })
-      .filter(c => c !== null)
-      // Solo futuros o de hoy
-      .filter(c => {
-        if (!c.fecha) return false;
-        const fechaEvento = new Date(c.fecha + "T" + c.hora);
-        return fechaEvento >= new Date(Date.now() - 86400000); // margen 24h
-      })
-      .sort((a, b) => new Date(a.fecha + "T" + a.hora) - new Date(b.fecha + "T" + b.hora));
-
-    res.status(200).json(combates);
+    // Asegura que devuelve solo strings
+    res.status(200).json(archivos.map(f => String(f)));
   } catch (err) {
-    res.status(500).json({ error: "Error leyendo combates" });
+    res.status(500).json({ error: "Error leyendo noticias" });
   }
 };
