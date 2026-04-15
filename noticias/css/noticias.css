@@ -326,6 +326,36 @@
   color: var(--accent-2-color) !important;
 }
 
+/* Info extra combates en modal */
+.combate-info-modal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--bg-1-color);
+  border: 0.1rem solid var(--accent-2-color);
+  border-radius: 6px;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.combate-vs {
+  font-family: "Contrail One", sans-serif;
+  font-size: 1.1rem;
+  color: var(--base-color);
+  letter-spacing: 1px;
+}
+.combate-vs em {
+  color: var(--accent-2-color);
+  font-style: normal;
+  margin: 0 0.4rem;
+}
+.combate-detalle {
+  font-size: 0.82rem;
+  color: var(--base-color);
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+}
+
 /* =====================
    RESPONSIVE
    ===================== */
