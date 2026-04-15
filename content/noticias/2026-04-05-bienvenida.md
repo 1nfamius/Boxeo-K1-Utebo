@@ -1,7 +1,7 @@
 ---
 titulo: Bienvenidos a la nueva web de Boxeo K1 Utebo
 fecha: 2026-04-14
-tipo: comunicado
+tipo: noticia
 imagen: /assets/images/logos/boxeo-utebo-logo.webp
 resumen: >-
   Estrenamos nueva web con toda la información del club, horarios, disciplinas,
