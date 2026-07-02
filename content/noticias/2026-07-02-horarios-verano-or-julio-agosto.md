@@ -1,5 +1,5 @@
 ---
-titulo: Horarios Verano   |   Julio  -  Agosto
+titulo: Horarios Verano   |   Julio - Agosto
 fecha: 2026-07-01
 tipo: combate
 imagen: /assets/images/noticias/imagen_2026-07-02_213826478.png
