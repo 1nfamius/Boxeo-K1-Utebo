@@ -1,0 +1,128 @@
+{
+  "lunes": [
+    {
+      "inicio": "19:30",
+      "fin": "21:00",
+      "disciplina": "K1",
+      "entrenador": "Jesus Soriano Marco",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "k1"
+    }
+  ],
+
+  "martes": [
+    {
+      "inicio": "10:30",
+      "fin": "11:15",
+      "disciplina": "Boxeo",
+      "entrenador": "Sergio Mateo",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "boxeo"
+    },
+    {
+      "inicio": "18:15",
+      "fin": "19:30",
+      "disciplina": "Brazilian Jiu-Jitsu",
+      "entrenador": "Costel Blahuianu",
+      "nivel": "Todos",
+      "vestimenta": "Gi",
+      "colorKey": "bjj"
+    },
+    {
+      "inicio": "19:30",
+      "fin": "21:00",
+      "disciplina": "Boxeo",
+      "entrenador": "Sergio Mateo",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "boxeo"
+    } 
+  ],
+
+  "miercoles": [
+    {
+      "inicio": "10:00",
+      "fin": "12:00",
+      "disciplina": "---",
+      "entrenador": "---",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "libre"
+    },
+    {
+      "inicio": "19:30",
+      "fin": "21:00",
+      "disciplina": "K1",
+      "entrenador": "Jesus Soriano Marco",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "k1"
+    }
+  ],
+
+  "jueves": [
+    {
+      "inicio": "10:00",
+      "fin": "11:15",
+      "disciplina": "Boxeo",
+      "entrenador": "Sergio Mateo",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "boxeo"
+    },
+    {
+      "inicio": "18:15",
+      "fin": "19:30",
+      "disciplina": "Brazilian Jiu-Jitsu",
+      "entrenador": "Costel Blahuianu",
+      "nivel": "Todos",
+      "vestimenta": "NO-Gi",
+      "colorKey": "bjj"
+    },
+    {
+      "inicio": "19:30",
+      "fin": "21:00",
+      "disciplina": "Boxeo",
+      "entrenador": "Sergio Mateo",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "boxeo"
+    }
+  ],
+
+  "viernes": [
+    {
+      "inicio": "18:15",
+      "fin": "19:30",
+      "disciplina": "Brazilian Jiu-Jitsu",
+      "entrenador": "Costel Blahuianu",
+      "nivel": "Todos",
+      "vestimenta": "Gi",
+      "colorKey": "bjj"
+    },
+    {
+      "inicio": "19:30",
+      "fin": "21:00",
+      "disciplina": "K1",
+      "entrenador": "Jesus Soriano Marco",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "k1"
+    },
+    {
+      "inicio": "19:30",
+      "fin": "21:00",
+      "disciplina": "Boxeo",
+      "entrenador": "Sergio Mateo",
+      "nivel": "Todos",
+      "vestimenta": "Ropa deportiva",
+      "colorKey": "boxeo"
+    }
+  ],
+
+  "sabado": [
+  ],
+  "domingo": []
+}

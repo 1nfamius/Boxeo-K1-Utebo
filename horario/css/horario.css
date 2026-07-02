@@ -31,6 +31,17 @@ main{
     font-size: 3rem;
     margin-top: 0.1rem;
 }
+
+.horario h3{
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.horario span{
+  color: var(--accent-2-color);
+}
+
 .horario-nav ul {
   display: flex;
   justify-content: center;

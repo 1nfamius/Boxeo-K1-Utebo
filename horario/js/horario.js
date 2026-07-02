@@ -2,7 +2,7 @@ let intervaloCountdown = null;
 
 async function cargarHorario() {
 
-  const res = await fetch("/horario/data/horario.json");
+  const res = await fetch("/horario/data/horario-verano.json");
   const data = await res.json();
 
   // Lunes a sábado en el front
